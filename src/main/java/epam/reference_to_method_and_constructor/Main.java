@@ -4,18 +4,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        FunctionalInterface<String> functionalInterface1 = SomeClass::print1;
-        functionalInterface1.method1("Reference to static method");
+        MyFunctionalInterface<String> myFunctionalInterface1 = SomeClass::print1;
+        myFunctionalInterface1.method1("Reference to static method");
         System.out.println("================================================");
 
         SomeClass someClass = new SomeClass();
-        FunctionalInterface<String> functionalInterface2 = someClass::print2;
-        functionalInterface2.method1("Reference to object method");
+        MyFunctionalInterface<String> myFunctionalInterface2 = someClass::print2;
+        myFunctionalInterface2.method1("Reference to object method");
         System.out.println("================================================");
 
-        FunctionalInterface2 interface2 = SomeClass2::new;
+        MyFunctionalInterface2 interface2 = SomeClass2::new;
         SomeClass2 someClass2 = interface2.create("Asset", "qwerty");
         System.out.println(someClass2);
+
+        MyFunctionalInterface3<SomeClass2> interface3 = SomeClass2::new;
+        SomeClass2 someClass3 = interface3.create("Asset", "password");
+        System.out.println(someClass3);
+
 
     }
 }

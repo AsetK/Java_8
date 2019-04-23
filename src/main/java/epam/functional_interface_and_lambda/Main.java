@@ -21,6 +21,10 @@ public class Main {
         interfaceWithDefaulMethod2.method2();
         System.out.println("================================================");
 
+        MyFunctionalInterface<String> myFunctionalInterface = s -> s.length() > 5; //defining what it do
+        System.out.println(myFunctionalInterface.test("qwe"));                  //doing it
+        System.out.println(myFunctionalInterface.test("qweqwe"));
+
 
 
 

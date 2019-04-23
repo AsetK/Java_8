@@ -1,6 +1,6 @@
 package epam.functional_interface_and_lambda;
 
-@FunctionalInterface // says that interface should have only ONE abstract method
+@FunctionalInterface  // says that interface should have only ONE abstract method
 public interface InterfaceWithDefaulMethod {
 
     public void method1();
