@@ -2,6 +2,7 @@ package epam.stream;
 
 import java.util.ArrayList;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -62,6 +63,12 @@ public class Main {
         System.out.println("Reduce:");
         Optional<String> reduced = list.stream().reduce((s1, s2) -> s1 + " - " + s2);
         reduced.ifPresent(s -> System.out.println(s));
+        System.out.println("==========================================================");
+
+        System.out.println("Stream with multithreading:");
+
+        list.parallelStream().sorted().sequential().forEach(s -> System.out.println(s)); //нужно обратно перейти в однопоточно чтобы нормально распечатал
+
         System.out.println("==========================================================");
 
 
