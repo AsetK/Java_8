@@ -6,6 +6,18 @@ public class Main {
 
         MyFunctionalInterface<String> myFunctionalInterface1 = SomeClass::print1;
         myFunctionalInterface1.method1("Reference to static method");
+
+        MyFunctionalInterface<String> myFunctionalInterface1_2 = x -> System.out.println(x.toUpperCase());
+        myFunctionalInterface1_2.method1("lambda");
+
+        MyFunctionalInterface<String> myFunctionalInterface1_3 = new MyFunctionalInterface<String>(){
+            @Override
+            public void method1(String x){
+                System.out.println(x.toUpperCase());
+            }
+
+        };
+        myFunctionalInterface1_3.method1("anonymous class");
         System.out.println("================================================");
 
         SomeClass someClass = new SomeClass();

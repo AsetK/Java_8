@@ -12,6 +12,10 @@ class User {
         this.name = name;
     }
 
+    public static void setDefaultName(User user){
+        user.setName("Default Name");
+    }
+
     @Override
     public String toString() {
         return "User{" +
