@@ -9,7 +9,7 @@ public class Main {
 
     }
 
-    public static Operatios getOperations(char symbol)
+    public static Operations getOperations(char symbol)
     {
         switch (symbol)
         {
