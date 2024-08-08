@@ -1,4 +1,4 @@
-package epam.method_returns_lambda;
+package _3_method_return_lambda;
 
 public interface Operations {
     int getResult(int value1, int value2);
